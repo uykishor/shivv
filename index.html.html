@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shivani’s Birthday Wonderland 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#ffd9e8;--bg2:#e6d9ff;--bg3:#fff1e6;--ink:#5a2a47;--card:#fffaf5;--pink:#ff8fb8;--deep:#e0558c;--gold:#f6c453;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#4a2340;--bg2:#2e2450;--bg3:#3b2538;--ink:#ffe6f1;--card:#4b2e47}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 60%,var(--bg3));background-attachment:fixed;overflow-x:hidden}
+h1,h2,.hand{font-family:Gaegu,"Comic Sans MS",cursive;line-height:1.1}
+h1{font-size:clamp(2.2rem,8vw,3.6rem);margin:.3em 0;color:var(--deep)}h2{font-size:clamp(1.6rem,5vw,2.4rem);color:var(--deep);margin:.2em 0}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;justify-content:center;align-items:center;gap:6px;padding:8px}
+#bar i{font-style:normal;filter:grayscale(1);opacity:.4;transition:.4s;font-size:1.1rem}#bar i.on{filter:none;opacity:1;transform:scale(1.2)}
+#snd{position:fixed;right:10px;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:30;border:0;background:var(--card);border-radius:20px;padding:4px 10px;font-size:1.1rem;cursor:pointer}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:15;overflow:hidden}
+.f{position:absolute;bottom:-40px;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+.pg{display:none;min-height:100vh;padding:56px 18px 40px;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;max-width:680px;margin:auto;position:relative;z-index:5}
+.pg.on{display:flex;animation:in .7s ease}
+@keyframes in{from{opacity:0;transform:scale(.9)}}
+p{margin:.2em 0;font-size:1.1rem;line-height:1.55}
+.big{font-size:5rem;animation:bob 2.4s ease-in-out infinite;cursor:default}
+@keyframes bob{50%{transform:translateY(-12px) rotate(4deg)}}
+button,.btn{font-family:Gaegu,cursive;font-size:1.4rem;font-weight:700;color:#fff;background:linear-gradient(135deg,#ff8fb8,#e0558c);border:0;border-radius:30px;padding:10px 24px;cursor:pointer;box-shadow:0 6px 0 #c13f73;transition:transform .15s}
+button:active{transform:translateY(4px);box-shadow:0 2px 0 #c13f73}button:focus-visible,.clk:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.hid{display:none!important}
+.clk{cursor:pointer;background:none;border:0;box-shadow:none;padding:0;color:inherit;font-size:5rem;animation:bob 2.4s ease-in-out infinite}
+.clk:hover{transform:scale(1.15)}
+.wig{animation:wig .6s}@keyframes wig{25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
+.paper{background:var(--card);border-radius:14px;padding:20px 22px;text-align:left;box-shadow:0 10px 30px #e0558c33;width:100%;max-height:62vh;overflow:auto;border-left:6px solid var(--pink)}
+.paper p{animation:in .8s}
+.row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.notes{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;width:100%}
+.notes button{font-size:1.5rem;padding:8px 0;box-shadow:0 4px 0 #c13f73}.notes button.d{opacity:.5}
+.wish{min-height:4.5em;font-size:1.2rem}
+.gal{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.pol{background:#fff;padding:8px 8px 4px;width:130px;box-shadow:0 6px 16px #0003;cursor:pointer;border:0;color:#5a2a47;font:inherit;transform:rotate(var(--r))}
+.pol div{height:100px;background:#ffe0ee;display:flex;align-items:center;justify-content:center;font-size:2.6rem;overflow:hidden}.pol img{width:100%;height:100%;object-fit:cover}
+.pol span{font-family:Gaegu,cursive;font-size:1rem}
+.tl{text-align:left;font-size:1rem;border-left:3px dotted var(--pink);padding-left:14px;margin:0}.tl li{list-style:none;margin:6px 0}
+.up{font-size:.9rem;opacity:.85}
+dialog{border:0;border-radius:16px;background:var(--card);color:var(--ink);padding:18px;max-width:340px;text-align:center}dialog img{max-width:100%;border-radius:8px}
+dialog::backdrop{background:#0006}
+.cake{font-size:5.5rem}.cdl{display:flex;gap:14px;justify-content:center;font-size:2.4rem}
+.cdl button{background:none;border:0;box-shadow:none;font-size:2.4rem;padding:0;animation:bob 1s infinite}
+.cdl button.off{animation:none;filter:grayscale(1);opacity:.4}
+#portal{font-size:4rem;animation:bob 2s infinite}
+.night{background:linear-gradient(#2b1d5e,#7b5fc4,#e9a5d6)!important;color:#fff}
+.night h2{color:#ffe6f1}
+.glow{text-shadow:0 0 14px #ff8fb8,0 0 30px #e0558c}
+#heartname{font-size:1.6rem;font-family:Gaegu,cursive;font-weight:700;color:#fff;background:radial-gradient(circle,#ff6fa5,#e0558c);padding:26px 30px;border-radius:50% 50% 45% 45%;cursor:pointer;border:0;box-shadow:0 0 30px #ff8fb8}
+#secret{background:#fff;color:var(--deep);padding:14px;border-radius:12px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style></head><body>
+<div id="bar" aria-label="Progress"></div>
+<button id="snd" aria-label="Toggle music and sounds" aria-pressed="true">🔊</button>
+<div id="fx" aria-hidden="true"></div>
+<main>
+
+<section class="pg" id="p0">
+ <div class="big" aria-hidden="true">🧸💌</div>
+ <h1 id="t0a" class="hid">Heyyy, Shivani! 🎀</h1>
+ <p id="t0b" class="hid">Guess what? Someone has created a tiny little world just for you. 🥹💗</p>
+ <p id="t0c" class="hid">Can you guess who? <span aria-hidden="true">💗💗💗</span></p>
+ <p id="t0d" class="hid">Hehe… it’s someone who thinks you’re pretty special. ❤️</p>
+ <button class="clk hid" id="gift" aria-label="Open the gift box">🎁</button>
+ <div id="bun" class="big hid" aria-hidden="true">🐰</div>
+ <h2 id="nm" class="hid glow">Shivani 💗</h2>
+ <button id="open1" class="hid" data-next>Open Your Little Surprise 🎁</button>
+</section>
+
+<section class="pg" id="p1">
+ <div class="row" aria-hidden="true"><span class="cake">🎂</span><span class="big">🎈</span></div>
+ <div class="cdl" id="cd2" aria-hidden="true"><span>🕯️</span><span>🕯️</span><span>🕯️</span></div>
+ <h1>HAPPY BIRTHDAY, SHIVANIII! 🎂💗</h1>
+ <div id="l2"></div>
+ <p class="hand" style="font-size:1.6rem">🧸 “Today’s princess: SHIVANI 👑🎀”</p>
+ <p>Official birthday rule: You’re allowed unlimited cake, unlimited cuddles, and absolutely zero sadness today! 🧸💕</p>
+ <button data-next>A Little Message From My Heart 💌</button>
+</section>
+
+<section class="pg" id="p2">
+ <h2>Things I Wish I Could Tell You Every Day</h2>
+ <p>Shivani, there’s something I want you to know… 💗</p>
+ <button class="clk" id="env" aria-label="Open the letter">💌</button>
+ <div class="paper hid" id="letter"></div>
+ <p class="hand hid" id="wl">Written with love, just for you. 💌</p>
+ <button class="hid" id="n3" data-next>Let’s Visit Our Little Memory Garden 📸</button>
+</section>
+
+<section class="pg" id="p3">
+ <h2>Our Little World of Memories</h2>
+ <p class="up">Add your photos 📷 <input type="file" id="file" accept="image/*" multiple aria-label="Upload photos"></p>
+ <div class="gal" id="gal"></div>
+ <ul class="tl" id="tl"></ul>
+ <p class="hand hid" id="fc1" style="font-size:1.4rem">If I could keep one thing forever, it would be the happiness hidden in moments like these. ✨</p>
+ <p class="hand hid" id="fc2" style="font-size:1.4rem">And our story still has so many beautiful pages left to write. 💕</p>
+ <button class="hid" id="n4" data-next>Time for Some Cuteness Overload! 🧸</button>
+ <button id="showend" style="font-size:1rem">Finish the gallery ✨</button>
+</section>
+<dialog id="dlg"><div id="dc"></div><p><button id="dx" style="font-size:1.1rem">Close 💗</button></p></dialog>
+
+<section class="pg" id="p4">
+ <h2>Welcome to Shivani’s Cute Little Universe</h2>
+ <p>Tap each friend 🌸</p>
+ <div class="row">
+  <button class="clk" data-m="Emergency cuddle delivery for Shivani! 🤗💗 Please accept this extremely important teddy bear hug immediately!" aria-label="Teddy bear">🧸</button>
+  <button class="clk" data-m="Breaking news! 🚨 Shivani has officially been declared too cute for this planet!" aria-label="Bunny">🐰</button>
+  <button class="clk" data-m="If I could make one wish for you, it would be to see you smiling a little more every single day. ❤️" aria-label="Love cat">🐱</button>
+ </div>
+ <p class="paper hand" id="cm" style="min-height:4.5em;font-size:1.3rem" aria-live="polite">🌷</p>
+ <p class="hid hand" id="sec" style="font-size:1.4rem">Psst, Shivani… there’s still one more surprise waiting for you. 👀💝</p>
+ <button class="hid" id="n5" data-next>Open Your Little Jar of Wishes 🫙</button>
+</section>
+
+<section class="pg" id="p5">
+ <div class="big" aria-hidden="true">🫙</div>
+ <h2>Things I Wish for My Favorite Girl 💗</h2>
+ <p>Pick a little note, cutie pie! Each one has a wish just for you. 🎀</p>
+ <div class="notes" id="notes"></div>
+ <p class="paper wish" id="wish" aria-live="polite">💌</p>
+ <p class="hid hand" id="gold" style="font-size:1.3rem;background:#fff3c4;color:#5a2a47;padding:14px;border-radius:12px">💛 Shivani, if I could give you one birthday gift that lasts forever, I would give you a little reminder of how special you are, so you could open it whenever you need a smile. 💌</p>
+ <button class="hid" id="n6" data-next>One Last Little Adventure 🌙</button>
+</section>
+
+<section class="pg night" id="p6">
+ <div class="row" aria-hidden="true"><span class="big">🌙</span><span class="big">🐰</span></div>
+ <div class="cdl" id="cd7" aria-hidden="false"><button class="off" aria-label="Candle 1">🕯️</button><button class="off" aria-label="Candle 2">🕯️</button><button class="off" aria-label="Candle 3">🕯️</button></div>
+ <span class="cake" aria-hidden="true">🎂</span>
+ <h2>Make a Wish, Birthday Girl!</h2>
+ <p>Okay, birthday girl… 🥹💗</p>
+ <p>Take a tiny breath, close your eyes, and make your sweetest birthday wish. 🌟</p>
+ <button id="wishbtn">Okayyy, I’ve Made My Wish! ✨</button>
+ <p class="hid" id="blow">Tap the candles to blow them out 🕯️</p>
+ <div class="hid" id="portal" aria-hidden="true">💖🚪</div>
+ <p class="hid hand glow" id="afterw" style="font-size:1.5rem">I hope this year brings you closer to everything your heart is wishing for. ❤️</p>
+ <button class="hid" id="n7" data-next>Open Your Final Surprise 🎁</button>
+</section>
+
+<section class="pg" id="p7">
+ <div class="big" aria-hidden="true">🧸🌹</div>
+ <button id="heartname" aria-label="Shivani’s glowing heart">💗 Shivani 💗</button>
+ <h1>HAPPY BIRTHDAY, MY CUTIE PIE! 🎂🎀❤️</h1>
+ <div class="paper" id="final"></div>
+ <p class="hand hid" id="made" style="font-size:1.6rem">Made with all my love, just for you. 💗</p>
+ <div class="row hid" id="fb"><button id="hug">Give Me a Teddy Bear Hug! 🧸</button><button id="again">Let’s Start Our Little Story Again ↻</button></div>
+ <p class="hid hand" id="secret" style="font-size:1.4rem"></p>
+</section>
+</main>
+
+<script>
+// ===== EDIT ME =====
+const C={
+ girl:"Shivani",
+ secret:"Psst… you found it! 🥹 You clicked my heart five times. I love you more than every star in this little sky. — Your boyfriend ❤️",
+ captions:["One of my favorite people in this entire universe. 💗","A little moment that deserves to last forever.","How can someone be this adorable? 🥹🎀","A memory that makes me smile every time.","My favorite kind of happiness. ❤️"],
+ timeline:["📅 Add a special date here — the day we met","💬 A conversation I’ll never forget","😂 The silliest moment that made us laugh","🌟 A milestone that made me smile"],
+ music:true
+};
+const letter1=["Hey, my cutie pie, Shivani. ❤️","First of all, HAPPY BIRTHDAYYYY! 🎂🎀","I wish I could put all the happiness in this world inside a little box and give it to you today.","You are more than just a special person to me. You’re someone who can make an ordinary moment feel a little more beautiful just by being part of it.","I hope you always remember how precious you are.","I hope you keep smiling that beautiful smile, chasing your little dreams, laughing at silly things, and being the wonderfully adorable person you are.","And whenever life gets difficult, I hope you remember that you deserve patience, kindness, happiness, and a love that makes you feel safe and appreciated.","I might not always have the perfect words to express everything, but today I want you to know one thing…","I’m really, really happy that you’re part of my life. 🥹❤️","So here’s to you, your beautiful heart, your dreams, your happiness, and all the lovely memories waiting for us.","Happy Birthday, my favorite girl.","Stay cute. Stay happy. And please never stop being YOU.","Sending you the biggest virtual hug everrrr! 🧸💗","Yours, with a million little hearts. ❤️"];
+const letter2=["Shivani, ❤️","If I could give you the world today, I would.","But since I can’t fit the whole universe inside a birthday gift box, I made you this tiny little world instead. 🥹💗","Every little heart, every tiny surprise, every silly animation, and every word on these pages was put together to make you smile.","Because you deserve to feel special, not just today, but on all the ordinary days in between, too.","I hope this new year of your life brings you beautiful opportunities, peaceful moments, unexpected happiness, and countless reasons to laugh.","I hope you never forget how much potential you have, how many wonderful things are waiting for you, and how deserving you are of genuine happiness.","And I hope we get to share many more silly moments, unforgettable memories, and little adventures together.","Thank you for being the person you are.","Thank you for the smiles, the conversations, the little moments, and all the happiness you bring into my life.","I don’t know what every tomorrow will look like, but I know that today, I wanted to do something a little different for you.","Something you could open, explore, and smile at.","Something that says…","‘Hey, Shivani. You’re special. And today, this little world is all yours.’ ❤️","So eat your cake, make your wishes, laugh a little louder, and enjoy every second of your special day.","Happy Birthday, my favorite girl.","Keep shining, keep dreaming, and keep being the adorable cutie pie that you are.","Sending you a million hugs, a billion kisses, and a whole universe of little hearts. 🧸💋💗","Happy Birthday, Shivani. This little world was made just for you. 🎀❤️"];
+const wishes=["I wish for your smile to find a reason to appear even on your hardest days.","I wish for your dreams to become bigger than your fears.","I wish you could see just how wonderful you are.","I wish this new chapter of your life brings you beautiful surprises.","I wish you always feel appreciated for the person you are.","I wish for more silly conversations and moments that make us laugh until our cheeks hurt.","I wish you get closer to every dream you’re secretly working toward.","I wish your heart always finds peace, warmth, and happiness.","I wish we create more beautiful memories together.","And most importantly, I wish you a birthday as lovely and special as you are. ❤️"];
+// ===== ENGINE =====
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const sleep=ms=>new Promise(r=>setTimeout(r,RM?0:ms));
+let cur=0,muted=!C.music,ac,mg,tmr;
+const bar=$('#bar');for(let i=0;i<8;i++)bar.insertAdjacentHTML('beforeend','<i>💗</i>');
+function rain(e=['💗','💖','✨','🌸'],n=30,d=4){for(let i=0;i<n;i++){const s=document.createElement('span');s.className='f';s.textContent=e[i%e.length];s.style.cssText=`left:${Math.random()*100}vw;font-size:${14+Math.random()*26}px;animation-duration:${d+Math.random()*4}s;animation-delay:${Math.random()*1.5}s`;$('#fx').append(s);setTimeout(()=>s.remove(),11000)}}
+const confetti=()=>rain(['🎉','🎊','💗','⭐','🎀'],45,3.5);
+const fireworks=()=>rain(['🎆','✨','💥','💛'],30,5);
+function ping(f=660){if(muted)return;try{ac=ac||new AudioContext();const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;o.type='sine';g.gain.setValueAtTime(.08,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.5);o.connect(g).connect(ac.destination);o.start();o.stop(ac.currentTime+.5)}catch(e){}}
+function lullaby(){clearInterval(tmr);if(muted)return;const n=[523,659,784,659,587,698,880,698];let i=0;tmr=setInterval(()=>{if(muted)return clearInterval(tmr);ping(n[i++%8])},1200)}
+$('#snd').onclick=e=>{muted=!muted;e.target.textContent=muted?'🔇':'🔊';e.target.setAttribute('aria-pressed',!muted);muted?clearInterval(tmr):(ping(),lullaby())};
+$('#snd').textContent=muted?'🔇':'🔊';
+async function lines(box,arr,gap=900){box.innerHTML='';for(const t of arr){const p=document.createElement('p');p.textContent=t;box.append(p);p.scrollIntoView({block:'nearest',behavior:RM?'auto':'smooth'});await sleep(gap)}}
+async function go(n){rain(['💗'],14,3);ping(784);$$('.pg').forEach(p=>p.classList.remove('on'));cur=n;$('#p'+n).classList.add('on');scrollTo(0,0);$$('#bar i').forEach((h,i)=>h.classList.toggle('on',i<=n));if(!muted&&!tmr)lullaby();(init[n]||(()=>{}))()}
+$$('[data-next]').forEach(b=>b.onclick=()=>go(cur+1));
+const show=id=>$(id).classList.remove('hid');
+const init=[
+async()=>{['#t0a','#t0b','#t0c','#t0d'].forEach(s=>$(s).classList.add('hid'));$('#gift').classList.add('hid');for(const s of['#t0a','#t0b','#t0c','#t0d']){show(s);await sleep(1400)}show('#gift')},
+async()=>{await sleep(300);confetti();ping(880);lines($('#l2'),["Today is not just another day…","It’s the day my favorite girl came into this beautiful world. 🥹❤️"],1800)},
+()=>{},()=>{},()=>{},()=>{},()=>{},()=>{},
+()=>{await0()}];
+init[7]=()=>{const f=$('#final');f.innerHTML='';['#made','#fb'].forEach(s=>$(s).classList.add('hid'));lines(f,letter2,1500).then(()=>{show('#made');show('#fb');fireworks();rain(['💗','🌹'],60,6)})};
+// P1
+$('#gift').onclick=async e=>{const g=e.target;g.classList.add('wig');ping(523);await sleep(700);g.textContent='🎀';await sleep(400);g.textContent='🎁✨';rain(['💗','💖'],40,3);ping(880);show('#bun');show('#nm');show('#open1');g.classList.add('hid')};
+// P3
+$('#env').onclick=async e=>{e.target.classList.add('hid');show('#letter');ping(659);await lines($('#letter'),letter1,1700);show('#wl');show('#n3')};
+// P4
+const gal=$('#gal');let n=0;const emo=['🌷','🧸','🐰','🌸','💐'];
+function pol(src){const i=n++,b=document.createElement('button');b.className='pol';b.style.setProperty('--r',(i%2?3:-3)+'deg');const cap=C.captions[i%5];b.innerHTML=`<div>${src?`<img src="${src}" alt="Memory ${i+1}">`:emo[i%5]}</div><span>${cap}</span>`;b.onclick=()=>{$('#dc').innerHTML=(src?`<img src="${src}" alt="">`:`<div style="font-size:5rem">${emo[i%5]}</div>`)+`<p class="hand" style="font-size:1.4rem">${cap}</p>`;$('#dlg').showModal();ping(700)};gal.append(b)}
+for(let i=0;i<5;i++)pol();
+$('#file').onchange=e=>{gal.innerHTML='';n=0;[...e.target.files].forEach(f=>pol(URL.createObjectURL(f)))};
+$('#dx').onclick=()=>$('#dlg').close();
+$('#tl').innerHTML=C.timeline.map(t=>`<li>${t}</li>`).join('');
+$('#showend').onclick=async e=>{e.target.classList.add('hid');show('#fc1');await sleep(1800);show('#fc2');await sleep(1200);show('#n4');rain(['✨','💕'],20)};
+// P5
+const seen=new Set();$$('#p4 .clk').forEach((b,i)=>b.onclick=()=>{b.classList.add('wig');setTimeout(()=>b.classList.remove('wig'),600);$('#cm').textContent=b.dataset.m;rain(i==2?['✨']:['💗'],16,3);ping(600+i*100);seen.add(i);if(seen.size==3){show('#sec');show('#n5')}});
+// P6
+const opened=new Set(),nb=$('#notes');wishes.forEach((w,i)=>{const b=document.createElement('button');b.textContent='💌';b.setAttribute('aria-label','Wish '+(i+1));b.onclick=()=>{$('#wish').textContent=w;b.classList.add('d');opened.add(i);ping(500+i*40);rain(['⭐','💗'],8,3);if(opened.size>=5){show('#gold');show('#n6')}};nb.append(b)});
+// P7
+$('#wishbtn').onclick=async e=>{e.target.classList.add('hid');document.body.style.filter='brightness(1.15)';rain(['⭐','✨'],40,4);show('#blow');$$('#cd7 button').forEach(b=>b.classList.remove('off'));ping(988)};
+let blown=0;$$('#cd7 button').forEach(b=>b.onclick=async()=>{if(!b.classList.contains('off')&&!$('#wishbtn').classList.contains('hid')===false){b.classList.add('off');blown++;ping(300);if(blown==3){$('#blow').classList.add('hid');rain(['💗','💖','💕'],70,5);$$('#p6 .big')[1].classList.add('wig');show('#portal');await sleep(1200);show('#afterw');show('#n7')}}});
+// P8
+let hc=0;$('#heartname').onclick=()=>{hc++;rain(['💗'],6,3);ping(500+hc*80);if(hc==5){const s=$('#secret');s.textContent=C.secret;show('#secret');confetti()}};
+$('#hug').onclick=e=>{e.target.textContent='🧸🤗💗';rain(['💗','💖','💕','🧸'],90,5);ping(440)};
+$('#again').onclick=()=>{hc=0;seen.clear();opened.clear();blown=0;document.body.style.filter='';$$('.notes button').forEach(b=>b.classList.remove('d'));go(0)};
+// start
+$('#p0').classList.add('on');$$('#bar i')[0].classList.add('on');init[0]();rain(['💗','⭐','☁️'],18,8);
+function await0(){}
+</script></body></html>
